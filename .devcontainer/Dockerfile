@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-moveit-common \
     ros-humble-moveit-ros-planning-interface \
     ros-humble-moveit-planners-ompl \
+    ros-humble-moveit-resources-panda-moveit-config \
+    ros-humble-moveit-resources-panda-description \
     ros-humble-rviz2 \
     python3-rosdep \
     python3-vcstool \

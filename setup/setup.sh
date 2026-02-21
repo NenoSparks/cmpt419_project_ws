@@ -28,9 +28,11 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+
 set -e
 mkdir -p src
 mkdir -p py
+
 
 # ======================
 # Clone non-ROS packages
@@ -57,17 +59,21 @@ pip install --user matplotlib
 # ============
 # Import repos
 if [[ $import == true ]]; then
-    vcs import < setup/src.repos src --skip-existing --recursive
+    vcs import src < setup/src.repos --skip-existing -recursive
+
+    # Clone MoveIt tutorial
+    if [ ! -d moveit2_tutorials/.git ]; then
+        git clone -b humble https://github.com/moveit/moveit2_tutorials.git src/moveit2_tutorials
+    fi
 fi
 
 if [[ $build == true ]]; then
     # Resolve dependencies
     sudo apt-get update
     rosdep update
-    rosdep install -i --from-path src --rosdistro humble -y
-    
-    # Build workspace
+    rosdep install -i --from-paths src --ignore-src --rosdistro humble -y
     colcon build --symlink-install
 fi
+
 
 echo "Setup complete!"
