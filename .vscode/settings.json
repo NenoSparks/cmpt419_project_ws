@@ -29,4 +29,5 @@
     },
     "ROS2.distro": "humble",
     "remote.autoForwardPortsFallback": 0,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
 }

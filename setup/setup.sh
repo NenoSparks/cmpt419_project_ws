@@ -73,7 +73,7 @@ if [[ $build == true ]]; then
     sudo apt-get update
     rosdep update
     rosdep install -i --from-paths src --ignore-src --rosdistro humble -y
-    colcon build --symlink-install
+    colcon build --symlink-install --parallel-workers 1 --packages-skip moveit2_tutorials
 fi
 
 

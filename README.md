@@ -6,6 +6,9 @@ ros2 launch moveit_resources_panda_moveit_config demo.launch.py
 
 If that works then run:
 ```
+export MAKE_FLAGS="-j1"
+export CMAKE_BUILD_PARALLEL_LEVEL=1
+export CXXFLAGS="-O1 -g0"
 colcon build --symlink-install --packages-select moveit2_tutorials --parallel-workers 1
 source install/setup.bash
 ros2 launch moveit2_tutorials demo.launch.py
