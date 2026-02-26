@@ -59,10 +59,11 @@ pip install --user matplotlib
 # ============
 # Import repos
 if [[ $import == true ]]; then
-    vcs import src < setup/src.repos --skip-existing -recursive
+    # vcs import src < setup/src.repos --skip-existing --recursive
 
     # Clone MoveIt tutorial
-    if [ ! -d src/moveit2_tutorials ]; then
+    if [ ! -d src/moveit2_tutorials/.git ]; then
+        rm -rf src/moveit2_tutorials
         git clone -b humble https://github.com/moveit/moveit2_tutorials.git src/moveit2_tutorials
     fi
 fi
