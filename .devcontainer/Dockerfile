@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-rviz2 \
     python3-rosdep \
     python3-vcstool \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-controller-manager \
     nano \
     tmux \
     && rm -rf /var/lib/apt/lists/*

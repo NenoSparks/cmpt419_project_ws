@@ -62,7 +62,7 @@ if [[ $import == true ]]; then
     vcs import src < setup/src.repos --skip-existing -recursive
 
     # Clone MoveIt tutorial
-    if [ ! -d moveit2_tutorials/.git ]; then
+    if [ ! -d src/moveit2_tutorials ]; then
         git clone -b humble https://github.com/moveit/moveit2_tutorials.git src/moveit2_tutorials
     fi
 fi
