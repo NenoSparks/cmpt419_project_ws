@@ -26,3 +26,8 @@ source install/setup.bash
 ros2 launch moveit2_tutorials demo.launch.py
 ```
 Try moving the robot arm to a goal pose and hit "Plan & Execute". You can also verify the reachability of the robot is correct by trying to move it in directions it isn't physically capable of reaching as the goal pose. You should observe that the robot refuses to move.
+
+To launch custom gazebo world, run:
+```
+gazebo world/world1
+```
