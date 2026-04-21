@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-moveit \
     ros-humble-ur \
     docker.io \
+    iproute2 \
+    netcat-openbsd \
     # ros-humble-moveit-common \
     # ros-humble-moveit-ros-planning-interface \
     # ros-humble-moveit-planners-ompl \
