@@ -61,10 +61,30 @@ pip install --user matplotlib
 if [[ $import == true ]]; then
     # vcs import src < setup/src.repos --skip-existing --recursive
 
-    # Clone MoveIt tutorial
-    if [ ! -d src/moveit2_tutorials/.git ]; then
-        rm -rf src/moveit2_tutorials
-        git clone -b humble https://github.com/moveit/moveit2_tutorials.git src/moveit2_tutorials
+    # # Clone MoveIt tutorial
+    # if [ ! -d src/moveit2_tutorials/.git ]; then
+    #     rm -rf src/moveit2_tutorials
+    #     git clone -b humble https://github.com/moveit/moveit2_tutorials.git src/moveit2_tutorials
+    # fi
+    if [ ! -d src/Universal_Robots_ROS2_Gazebo_Simulation ]; then
+        rm -rf src/Universal_Robots_ROS2_Gazebo_Simulation
+        git clone -b humble https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation.git \
+        src/UniversalRobots_ROS2_Gazebo_Simulation
+    fi
+    if [ ! -d src/pymoveit2 ]; then
+        rm -rf src/pymoveit2
+        git clone https://github.com/AndrejOrsula/pymoveit2.git \
+        src/pymoveit2
+    fi
+    if [ ! -d src/pymoveit2 ]; then
+        rm -rf src/pymoveit2
+        git clone https://github.com/AndrejOrsula/pymoveit2.git \
+        src/pymoveit2
+    fi
+    if [ ! -d src/Universal_Robots_ROS2_Driver ]; then
+        rm -rf src/Universal_Robots_ROS2_Driver
+        git clone https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git \
+        src/Universal_Robots_ROS2_Driver
     fi
 fi
 

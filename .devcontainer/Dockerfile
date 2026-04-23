@@ -2,17 +2,21 @@ FROM althack/ros2:humble-dev
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-humble-navigation2 \
-    ros-humble-nav2-bringup \ 
-    ros-humble-turtlebot3-msgs \
-    ros-humble-turtlebot3 \
-    ros-humble-turtlebot3-gazebo \
+    # ros-humble-navigation2 \
+    # ros-humble-nav2-bringup \ 
+    # ros-humble-turtlebot3-msgs \
+    # ros-humble-turtlebot3 \
+    # ros-humble-turtlebot3-gazebo \
     ros-humble-moveit \
-    ros-humble-moveit-common \
-    ros-humble-moveit-ros-planning-interface \
-    ros-humble-moveit-planners-ompl \
-    ros-humble-moveit-resources-panda-moveit-config \
-    ros-humble-moveit-resources-panda-description \
+    ros-humble-ur \
+    docker.io \
+    iproute2 \
+    netcat-openbsd \
+    # ros-humble-moveit-common \
+    # ros-humble-moveit-ros-planning-interface \
+    # ros-humble-moveit-planners-ompl \
+    # ros-humble-moveit-resources-panda-moveit-config \
+    # ros-humble-moveit-resources-panda-description \
     ros-humble-rviz2 \
     python3-rosdep \
     python3-vcstool \
