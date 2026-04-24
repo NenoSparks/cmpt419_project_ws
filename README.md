@@ -1,3 +1,4 @@
+<img width="865" height="596" alt="image" src="https://github.com/user-attachments/assets/c9c9f55a-66a4-4650-bf1d-ad7664262c69" />
 # Overview
 A ROS2 Humble pick-and-place framework for Universal Robots manipulators using Python and MoveIt2 via pymoveit2. This repository includes a custom script that handles picking up and placing of objects, code to run and launch the robot inside of Gazebo, RViz, and URsim, and setup instructions for connecting and running nodes on physical UR hardware.
 # Dev Container
