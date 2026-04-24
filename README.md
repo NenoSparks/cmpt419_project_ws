@@ -41,11 +41,11 @@ docker run --rm -it -p 5900:5900 -p 6080:6080 -v ${HOME}/.ursim/urcaps:/urcaps -
 ```
 ## Step 5:
 Open the vnc viewer in your browser, after running URsim using docker, output of what URL to use to access URsim through your browser should be provided. For example http://198.64.0.1:6080/vnc.html?host=198.64.0.1&port=6080. Note down the IP address assigned to URsim by your computer.
-# Step 6:
+## Step 6:
 Once on the URsim page, navigate to the settings dashboard by clicking on the the 3 horizontal lines on the top right of the screen. Click on System and add the External Control URCap. If it says that a newer version is already installed, then URsim has already recognized the URCap. Exit System settings and navigate to the Installation tab on the top left.
-# Step 7
+## Step 7
 Click on URCaps -> External Control and enter the IP of your host (if you enabled networking to pass through your container) and leave the custom port as 50002.
-# Step 8
+## Step 8
 Finally, go to Program and add External Control as a Robot Program. The programs name should be "Control by {HOST_IP_ADDRESS}". When you are finally ready to try controlling the robot through URSim press the play button in the bottom right corner and select "Control by {HOST_IP_ADDRESS}" as the program you want to run. Otherwise, when you attempt to run MoveIt2 or custom scripts it will not successfully execute the commands even though the backend successfully connects to the robot!
 
 # Running custom nodes on URSim/Hardware
